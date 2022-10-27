@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:spotify/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -257,197 +258,209 @@ class Home extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Stack(
-                        clipBehavior: Clip.none,
-                        children: [
-                          Image.asset(
-                            "assets/images/bad_guy.png",
-                            fit: BoxFit.contain,
-                            width: 145,
-                          ),
-                          Positioned(
-                            bottom: -10,
-                            right: 10,
-                            child: Container(
-                              padding: EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                color: Color(0xFFE6E6E6),
-                                borderRadius: BorderRadius.circular(99),
-                              ),
-                              child: Icon(
-                                Icons.play_arrow_rounded,
-                                color: Color(0xFF555555),
+                  GestureDetector(
+                    onTap: () => Get.toNamed(Routes.PLAYER +
+                        "?image=bad_guy.png&song=Bad Guy&singer=Billie Eilish"),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          clipBehavior: Clip.none,
+                          children: [
+                            Image.asset(
+                              "assets/images/bad_guy.png",
+                              fit: BoxFit.contain,
+                              width: 145,
+                            ),
+                            Positioned(
+                              bottom: -10,
+                              right: 10,
+                              child: Container(
+                                padding: EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFE6E6E6),
+                                  borderRadius: BorderRadius.circular(99),
+                                ),
+                                child: Icon(
+                                  Icons.play_arrow_rounded,
+                                  color: Color(0xFF555555),
+                                ),
                               ),
                             ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                        ),
-                        child: Text(
-                          "Bad Guy",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 3,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                        ),
-                        child: Text(
-                          "Billie Eilish",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black,
+                          child: Text(
+                            "Bad Guy",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
+                          ),
+                          child: Text(
+                            "Billie Eilish",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     width: 14,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Stack(
-                        clipBehavior: Clip.none,
-                        children: [
-                          Image.asset(
-                            "assets/images/scorpion.png",
-                            fit: BoxFit.contain,
-                            width: 145,
-                          ),
-                          Positioned(
-                            bottom: -10,
-                            right: 10,
-                            child: Container(
-                              padding: EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                color: Color(0xFFE6E6E6),
-                                borderRadius: BorderRadius.circular(99),
-                              ),
-                              child: Icon(
-                                Icons.play_arrow_rounded,
-                                color: Color(0xFF555555),
+                  GestureDetector(
+                    onTap: () => Get.toNamed(Routes.PLAYER +
+                        "?image=scorpion.png&song=Scorpion&singer=Drake"),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          clipBehavior: Clip.none,
+                          children: [
+                            Image.asset(
+                              "assets/images/scorpion.png",
+                              fit: BoxFit.contain,
+                              width: 145,
+                            ),
+                            Positioned(
+                              bottom: -10,
+                              right: 10,
+                              child: Container(
+                                padding: EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFE6E6E6),
+                                  borderRadius: BorderRadius.circular(99),
+                                ),
+                                child: Icon(
+                                  Icons.play_arrow_rounded,
+                                  color: Color(0xFF555555),
+                                ),
                               ),
                             ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                        ),
-                        child: Text(
-                          "Scorpion",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 3,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                        ),
-                        child: Text(
-                          "Drake",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black,
+                          child: Text(
+                            "Scorpion",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
+                          ),
+                          child: Text(
+                            "Drake",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     width: 14,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Stack(
-                        clipBehavior: Clip.none,
-                        children: [
-                          Image.asset(
-                            "assets/images/bad_guy_2.png",
-                            fit: BoxFit.contain,
-                            width: 145,
-                          ),
-                          Positioned(
-                            bottom: -10,
-                            right: 10,
-                            child: Container(
-                              padding: EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                color: Color(0xFFE6E6E6),
-                                borderRadius: BorderRadius.circular(99),
-                              ),
-                              child: Icon(
-                                Icons.play_arrow_rounded,
-                                color: Color(0xFF555555),
+                  GestureDetector(
+                    onTap: () => Get.toNamed(Routes.PLAYER +
+                        "?image=bad_guy_2.png&song=WHEN WE ALL FALL ASLEEP...&singer=Billie Eilish"),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          clipBehavior: Clip.none,
+                          children: [
+                            Image.asset(
+                              "assets/images/bad_guy_2.png",
+                              fit: BoxFit.contain,
+                              width: 145,
+                            ),
+                            Positioned(
+                              bottom: -10,
+                              right: 10,
+                              child: Container(
+                                padding: EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFE6E6E6),
+                                  borderRadius: BorderRadius.circular(99),
+                                ),
+                                child: Icon(
+                                  Icons.play_arrow_rounded,
+                                  color: Color(0xFF555555),
+                                ),
                               ),
                             ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                        ),
-                        child: Text(
-                          "When We All...",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 3,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                        ),
-                        child: Text(
-                          "Billie Eilish",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black,
+                          child: Text(
+                            "When We All...",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
+                          ),
+                          child: Text(
+                            "Billie Eilish",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

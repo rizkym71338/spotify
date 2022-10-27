@@ -10,6 +10,8 @@ import 'package:spotify/app/modules/introduction/bindings/introduction_binding.d
 import 'package:spotify/app/modules/introduction/views/introduction_view.dart';
 import 'package:spotify/app/modules/login/bindings/login_binding.dart';
 import 'package:spotify/app/modules/login/views/login_view.dart';
+import 'package:spotify/app/modules/player/bindings/player_binding.dart';
+import 'package:spotify/app/modules/player/views/player_view.dart';
 import 'package:spotify/app/modules/register/bindings/register_binding.dart';
 import 'package:spotify/app/modules/register/views/register_view.dart';
 
@@ -55,6 +57,12 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => LoginView(),
       binding: LoginBinding(),
+      transition: Transition.rightToLeftWithFade,
+    ),
+    GetPage(
+      name: _Paths.PLAYER,
+      page: () => PlayerView(),
+      binding: PlayerBinding(),
       transition: Transition.rightToLeftWithFade,
     ),
   ];
